@@ -42,6 +42,7 @@ class CoffeeShop {
     func printOrder(coffee: Coffee?) {
         if let coffee = coffee {
             print("\(orderer) 님이 주문하신 \(coffee.rawValue)(이/가) 준비되었습니다 픽업대에서 가져가주세요.")
+            orderer = ""
         }
     }
     
