@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Person {
+struct Person {
     var name: String
     var gender: String
     var money: Int
@@ -29,7 +29,7 @@ class Person {
     /// - Parameters:
     ///   - coffee: 주문할 커피
     ///   - coffeeShop: 커피숍
-    func order(coffee: Coffee, coffeeShop: CoffeeShop) {
+    mutating func order(coffee: Coffee, coffeeShop: CoffeeShop) {
         if let coffeePrice = coffeeShop.getCoffeePrice(coffee) {
             if canBuyCoffee(price: coffeePrice) {
                 money -= coffeePrice
